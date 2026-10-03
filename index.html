@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asha Foundation | Education, Healthcare &amp; Community Development</title>
+<meta name="description" content="Asha Foundation works with communities to create sustainable opportunities in education, healthcare, women's empowerment and community development.">
+<meta name="keywords" content="NGO, charity, donate, volunteer, education, healthcare, women empowerment, community development">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Asha Foundation | Creating Change. Changing Lives.">
+<meta property="og:description" content="Support education, healthcare and livelihoods for families in need.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=70">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<!-- JSON-LD: replace placeholders -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"NGO","name":"Asha Foundation","url":"https://www.example.org","telephone":"+918932010023","email":"info@example.org","foundingDate":"2015"}
+</script>
+
+<style>
+/* ================= GLOBAL VARIABLES ================= */
+:root{
+  --green:#1F3D2E; --green-2:#2C5340; --paper:#F7F5F0; --paper-2:#EDE9DF;
+  --ink:#26282A; --muted:#5E625F; --earth:#8C7656; --accent:#C58A1E; --line:#D9D4C7;
+  --serif:'DM Serif Display',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+  --wrap:1180px;
+}
+/* ================= RESET & TYPOGRAPHY ================= */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;font-size:1rem;overflow-x:hidden}
+img{max-width:100%;display:block;background:var(--paper-2)}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.15;margin:0 0 .6em;color:var(--green)}
+h1{font-size:clamp(2.2rem,6vw,4rem)} h2{font-size:clamp(1.7rem,4vw,2.6rem)} h3{font-size:1.3rem}
+p{margin:0 0 1em}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+.label{display:block;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.lead{color:var(--muted);max-width:60ch}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.btn{display:inline-block;padding:13px 26px;border:2px solid var(--green);background:var(--green);color:#fff;text-decoration:none;font-weight:600;font-size:.95rem;border-radius:3px;cursor:pointer;font-family:inherit;transition:background .2s,color .2s}
+.btn:hover{background:var(--green-2)}
+.btn.gold{background:var(--accent);border-color:var(--accent);color:#1b1708}
+.btn.gold:hover{background:#d89a28}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+.more{font-weight:600;color:var(--green);text-decoration:none;border-bottom:2px solid var(--accent)}
+.more:hover{color:var(--accent)}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+
+/* ================= HEADER ================= */
+.topbar{background:var(--green);color:#e8efe9;font-size:.82rem;padding:8px 0}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.topbar span{margin-right:18px}.topbar i{margin-right:6px;color:var(--accent)}
+.topbar .tag{font-style:italic;opacity:.85}
+.topbar .soc a{margin-left:12px;text-decoration:none}
+header.nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.nav.scrolled{box-shadow:0 2px 14px rgba(0,0,0,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--serif);font-size:1.4rem;color:var(--green)}
+.logo b{width:36px;height:36px;border-radius:50%;background:var(--green);color:var(--paper);display:grid;place-items:center;font-size:1.1rem;font-weight:400}
+.menu{display:flex;align-items:center;gap:22px;list-style:none;margin:0;padding:0}
+.menu a{text-decoration:none;font-size:.9rem;font-weight:500;padding:6px 0;border-bottom:2px solid transparent}
+.menu a:hover,.menu a.active{border-color:var(--accent);color:var(--green)}
+.menu .btn{padding:10px 20px;color:#1b1708;border-bottom:2px solid var(--accent)}
+.burger{display:none;background:none;border:0;font-size:1.8rem;color:var(--green);cursor:pointer}
+
+/* ================= HERO SECTION ================= */
+.hero{position:relative;color:#fff;padding:0;min-height:600px;display:flex;align-items:flex-end;background:var(--green)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,35,25,.88),rgba(15,35,25,.45) 70%,rgba(15,35,25,.2))}
+.hero .wrap{position:relative;z-index:1;padding-top:110px;padding-bottom:48px}
+.hero h1{color:#fff;max-width:14ch}
+.hero p.lead{color:#e4ebe5;font-size:1.1rem;margin-bottom:28px}
+.hero .btns{display:flex;flex-wrap:wrap;gap:12px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:12px 40px;margin-top:48px;padding-top:20px;border-top:1px solid rgba(255,255,255,.3);font-size:.9rem}
+.hero-facts strong{font-family:var(--serif);font-weight:400;font-size:1.4rem;display:block;color:var(--accent)}
+
+/* ================= TRUST STRIP ================= */
+.strip{background:var(--paper-2);padding:40px 0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat strong{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,3rem);color:var(--green);display:block;line-height:1.1}
+.stat span{font-size:.9rem;color:var(--muted)}
+
+/* ================= ABOUT SECTION ================= */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+.values{display:flex;flex-wrap:wrap;gap:10px 28px;margin:24px 0;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-weight:600;color:var(--green)}
+.values i{color:var(--accent);margin-right:6px}
+
+/* ================= MISSION & VISION ================= */
+.mv{background:var(--green);color:#e8efe9}
+.mv h2,.mv h3{color:#fff}
+.mv .grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid rgba(255,255,255,.2)}
+.mv .grid>div{padding:48px 40px}
+.mv .grid>div+div{border-left:1px solid rgba(255,255,255,.2);background:var(--green-2)}
+.mv blockquote{margin:0;font-family:var(--serif);font-size:clamp(1.3rem,2.6vw,1.8rem);line-height:1.35;color:#fff}
+
+/* ================= PROGRAMS ================= */
+.progs{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:36px}
+.prog{background:#fff;border:1px solid var(--line);border-radius:3px;overflow:hidden;display:flex;flex-direction:column}
+.prog img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:transform .5s}
+.prog .im{overflow:hidden}.prog:hover img{transform:scale(1.04)}
+.prog div.b{padding:22px;display:flex;flex-direction:column;flex:1}
+.prog .more{align-self:flex-start;margin-top:auto}
+
+/* ================= IMPACT STORY ================= */
+.story{background:var(--paper-2)}
+.story .split{grid-template-columns:1.1fr 1fr}
+.story img{aspect-ratio:1/1}
+.facts{list-style:none;padding:0;margin:0 0 24px}
+.facts li{padding:10px 0;border-top:1px solid var(--line)}
+.facts b{color:var(--green);display:inline-block;min-width:110px}
+
+/* ================= IMPACT NUMBERS ================= */
+.impact .stats{margin-top:32px;text-align:left}
+.impact .stat{border-top:3px solid var(--accent);padding-top:14px}
+.impact .note{margin-top:28px;font-size:.92rem;color:var(--muted);max-width:70ch}
+
+/* ================= GALLERY ================= */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:10px;margin-top:32px}
+.gal button{padding:0;border:0;cursor:zoom-in;overflow:hidden;background:var(--paper-2)}
+.gal button:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gal button:nth-child(4){grid-row:span 2}
+.gal button:nth-child(7){grid-column:span 2}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gal button:hover img{transform:scale(1.05)}
+.lb{position:fixed;inset:0;background:rgba(10,18,14,.93);display:none;align-items:center;justify-content:center;z-index:100;padding:20px}
+.lb.open{display:flex}
+.lb img{max-height:85vh;max-width:100%;object-fit:contain}
+.lb button{position:absolute;background:none;border:0;color:#fff;font-size:2rem;cursor:pointer;padding:12px}
+.lb .x{top:10px;right:14px}.lb .p{left:8px}.lb .n{right:8px}
+
+/* ================= GET INVOLVED ================= */
+.involve{background:#fff}
+.ways{display:grid;grid-template-columns:repeat(5,1fr);margin-top:32px;border:1px solid var(--line)}
+.ways div{padding:26px 20px}
+.ways div+div{border-left:1px solid var(--line)}
+.ways i{font-size:1.6rem;color:var(--accent)}
+.ways h3{font-size:1.15rem;margin:10px 0 6px}.ways p{font-size:.9rem;color:var(--muted);margin:0}
+.involve .btns{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+
+/* ================= DONATION CTA ================= */
+.donate{position:relative;color:#fff;background:var(--green);text-align:center;overflow:hidden}
+.donate>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.25}
+.donate .wrap{position:relative}
+.donate h2{color:#fff}.donate p{max-width:56ch;margin:0 auto 26px;color:#e4ebe5}
+.donate .btns{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+
+/* ================= TESTIMONIALS ================= */
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:40px 56px;margin-top:36px}
+.quotes figure{margin:0;padding-left:22px;border-left:3px solid var(--accent)}
+.quotes blockquote{margin:0 0 12px;font-family:var(--serif);font-size:1.2rem;line-height:1.45;color:var(--green)}
+.quotes figcaption{font-size:.88rem;color:var(--muted)}.quotes figcaption b{color:var(--ink)}
+
+/* ================= PARTNERS ================= */
+.partners{padding:44px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.partners h2{font-size:1rem;font-family:var(--sans);font-weight:600;text-align:center;color:var(--muted);margin-bottom:22px}
+.logos{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 44px;filter:grayscale(1);opacity:.7}
+.logos span{font-family:var(--serif);font-size:1.15rem;display:flex;align-items:center;gap:8px}
+
+/* ================= FAQ ================= */
+.faq{max-width:780px;margin:32px auto 0}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;text-align:left;background:none;border:0;padding:20px 0;font:600 1.02rem var(--sans);color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;gap:16px}
+.faq-q i{transition:transform .3s;color:var(--accent)}
+.faq-q[aria-expanded=true] i{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s;color:var(--muted)}
+.faq-a p{padding-bottom:20px;margin:0}
+
+/* ================= CONTACT ================= */
+.contact{background:var(--paper-2)}
+.contact .split{align-items:start}
+.cinfo{list-style:none;padding:0;margin:24px 0}
+.cinfo li{display:flex;gap:14px;padding:10px 0}.cinfo i{color:var(--accent);font-size:1.2rem}
+.social a{display:inline-grid;place-items:center;width:38px;height:38px;border:1px solid var(--green);color:var(--green);margin-right:8px;border-radius:50%;text-decoration:none}
+.social a:hover{background:var(--green);color:#fff}
+form{background:#fff;padding:32px;border:1px solid var(--line)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fld{margin-bottom:16px}
+.fld label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px}
+.fld input,.fld textarea{width:100%;padding:12px;border:1px solid #bdb8aa;border-radius:2px;font:inherit;background:var(--paper)}
+.fld .err{color:#a02a1c;font-size:.8rem;min-height:1em;display:block}
+.fld input.bad,.fld textarea.bad{border-color:#a02a1c}
+form .btn{width:100%}
+.fnote{font-size:.8rem;color:var(--muted);margin:10px 0 0}
+
+/* ================= GOOGLE MAP ================= */
+.map-wrapper{margin-top:40px;height:400px;border:1px solid var(--line)}
+.map-wrapper iframe{width:100%;height:100%;border:0;display:block}
+
+/* ================= FOOTER ================= */
+footer{background:#18241d;color:#c9d3cc;padding:64px 0 0;font-size:.92rem}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:36px}
+footer h3{color:#fff;font-family:var(--sans);font-weight:600;font-size:.95rem;margin-bottom:14px}
+footer ul{list-style:none;padding:0;margin:0}footer li{margin-bottom:8px}
+footer a{text-decoration:none}footer a:hover{color:var(--accent)}
+footer .logo{color:#fff;margin-bottom:12px}footer .logo b{background:var(--paper);color:var(--green)}
+footer .social a{border-color:#c9d3cc;color:#c9d3cc}
+.fbot{margin-top:48px;padding:20px 0;border-top:1px solid rgba(255,255,255,.15);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:.82rem}
+#top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;border:0;background:var(--accent);color:#1b1708;font-size:1.2rem;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;z-index:40}
+#top.show{opacity:1;pointer-events:auto}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:1199px){.menu{gap:16px}.menu a{font-size:.85rem}}
+@media (max-width:991px){
+  .burger{display:block}
+  .menu{position:absolute;top:70px;left:0;right:0;background:var(--paper);flex-direction:column;align-items:stretch;gap:0;padding:0 20px;max-height:0;overflow:hidden;transition:max-height .35s;border-bottom:1px solid var(--line)}
+  .menu.open{max-height:520px;padding:10px 20px 20px}
+  .menu a{display:block;padding:12px 0}
+  .menu .btn{text-align:center;margin-top:8px}
+  .split,.story .split{grid-template-columns:1fr;gap:32px}
+  .split img{aspect-ratio:3/2}
+  .progs{grid-template-columns:repeat(2,1fr)}
+  .ways{grid-template-columns:1fr 1fr}.ways div{border-top:1px solid var(--line)}.ways div+div{border-left:0}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:767px){
+  section{padding:56px 0}
+  .topbar .tag,.topbar .soc,.topbar .hide-sm{display:none}
+  .stats{grid-template-columns:1fr 1fr;gap:28px 16px}
+  .mv .grid{grid-template-columns:1fr}.mv .grid>div{padding:32px 24px}.mv .grid>div+div{border-left:0;border-top:1px solid rgba(255,255,255,.2)}
+  .quotes{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
+  .gal button:nth-child(n){grid-column:auto;grid-row:auto}.gal button:nth-child(1){grid-column:span 2;grid-row:span 2}
+  .hero{min-height:560px}
+}
+@media (max-width:575px){
+  .progs,.ways,.row2{grid-template-columns:1fr}
+  .ways div{border-left:0}
+  form{padding:22px 16px}
+  .map-wrapper{height:300px}
+  .hero .btns .btn,.involve .btns .btn,.donate .btns .btn{width:100%;text-align:center}
+}
+@media (max-width:479px){.fgrid{grid-template-columns:1fr}.hero-facts{gap:14px 24px}}
+@media (min-width:1600px){:root{--wrap:1360px}body{font-size:1.06rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- ================= TOP BAR ================= -->
+<div class="topbar">
+  <div class="wrap">
+    <div><span><i class="bi bi-telephone"></i>+91 8932010023</span><span class="hide-sm"><i class="bi bi-envelope"></i>info@example.org</span><span class="hide-sm"><i class="bi bi-geo-alt"></i>Lucknow, Uttar Pradesh</span></div>
+    <div class="tag">Together we can create change</div>
+    <div class="soc"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></div>
+  </div>
+</div>
+
+<!-- ================= NAVIGATION ================= -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#home" class="logo" aria-label="Asha Foundation home"><b>A</b>Asha Foundation</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i class="bi bi-list"></i></button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#work">Our Work</a></li>
+      <li><a href="#impact">Our Impact</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#involved">Get Involved</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#donate" class="btn gold">Donate Now</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- ================= HERO SECTION ================= -->
+<section class="hero" id="home" style="padding:0">
+  <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1800&q=75" alt="Volunteers and children together at a community learning centre" fetchpriority="high">
+  <div class="wrap">
+    <h1>Creating Change. Changing Lives.</h1>
+    <p class="lead">We work with communities to create sustainable opportunities, improve lives, and build a better future for everyone.</p>
+    <div class="btns"><a href="#donate" class="btn gold">Donate Now</a><a href="#work" class="btn ghost">Explore Our Work</a></div>
+    <div class="hero-facts">
+      <div><strong>Since 2015</strong>Serving communities</div>
+      <div><strong>10,000+</strong>Lives impacted</div>
+      <div><strong>25+</strong>Active programs</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUST / IMPACT STRIP ================= -->
+<div class="strip">
+  <div class="wrap stats">
+    <div class="stat"><strong data-count="10000" data-suffix="+">0</strong><span>Lives impacted</span></div>
+    <div class="stat"><strong data-count="25" data-suffix="+">0</strong><span>Active programs</span></div>
+    <div class="stat"><strong data-count="15" data-suffix="+">0</strong><span>Communities reached</span></div>
+    <div class="stat"><strong data-count="50" data-suffix="+">0</strong><span>Volunteers</span></div>
+  </div>
+</div>
+
+<!-- ================= ABOUT SECTION ================= -->
+<section id="about">
+  <div class="wrap split">
+    <img class="reveal" loading="lazy" src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=900&q=70" alt="Volunteers working together on a community project">
+    <div class="reveal">
+      <span class="label">Who we are</span>
+      <h2>Working Together for a Better Tomorrow</h2>
+      <p>Asha Foundation is a registered non-profit organisation that began in 2015 with a single evening class for children in one neighbourhood. Today we work alongside families in more than fifteen communities.</p>
+      <p>Many families we meet are not short of effort. They are short of access: to a school that stays open, a clinic within reach, or a first loan to start a small business. We exist to close those gaps.</p>
+      <p>We listen first, build with local people, and hand over each programme to the community once it can stand on its own. Our vision is a society where nobody is left behind because of where they were born.</p>
+      <div class="values"><span><i class="bi bi-shield-check"></i>Integrity</span><span><i class="bi bi-heart"></i>Compassion</span><span><i class="bi bi-tree"></i>Sustainable impact</span></div>
+      <a href="#work" class="more">Learn More About Us →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MISSION & VISION ================= -->
+<section class="mv" id="work">
+  <div class="wrap">
+    <div class="grid reveal">
+      <div><span class="label">Our mission</span><blockquote>Our mission is to empower individuals and communities through sustainable initiatives, education, healthcare and opportunity.</blockquote></div>
+      <div><span class="label">Our vision</span><blockquote>A society where every individual has the opportunity to live with dignity, equality and hope.</blockquote></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRAMS ================= -->
+<section id="programs">
+  <div class="wrap">
+    <span class="label">Our key programs</span>
+    <h2>Where We Make a Difference</h2>
+    <p class="lead">Six areas of work, shaped by what the communities we serve tell us they need most.</p>
+    <div class="progs">
+      <article class="prog reveal"><div class="im"><img loading="lazy" src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=700&q=70" alt="Children studying in a classroom"></div><div class="b"><h3>Education</h3><p>Supporting children with schooling, learning resources and after-school opportunities.</p><a class="more" href="#contact">Learn more</a></div></article>
+      <article class="prog reveal"><div class="im"><img loading="lazy" src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=700&q=70" alt="Health worker at a community medical camp"></div><div class="b"><h3>Healthcare</h3><p>Improving access to care through medical camps, screenings and health awareness.</p><a class="more" href="#contact">Learn more</a></div></article>
+      <article class="prog reveal"><div class="im"><img loading="lazy" src="https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&w=700&q=70" alt="Women attending a skills training session"></div><div class="b"><h3>Women Empowerment</h3><p>Skills training, savings groups and entrepreneurship support for women.</p><a class="more" href="#contact">Learn more</a></div></article>
+      <article class="prog reveal"><div class="im"><img loading="lazy" src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=700&q=70" alt="Community members building together"></div><div class="b"><h3>Community Development</h3><p>Clean water, shared spaces and local leadership for lasting, community-owned progress.</p><a class="more" href="#contact">Learn more</a></div></article>
+      <article class="prog reveal"><div class="im"><img loading="lazy" src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=700&q=70" alt="Volunteers packing food supplies"></div><div class="b"><h3>Food &amp; Basic Needs</h3><p>Ration kits, warm clothing and emergency support for the most vulnerable families.</p><a class="more" href="#contact">Learn more</a></div></article>
+      <article class="prog reveal"><div class="im"><img loading="lazy" src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=700&q=70" alt="Volunteers planting saplings"></div><div class="b"><h3>Environment</h3><p>Tree planting, waste reduction and environmental awareness led by local youth.</p><a class="more" href="#contact">Learn more</a></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURED IMPACT STORY ================= -->
+<section class="story">
+  <div class="wrap split">
+    <img class="reveal" loading="lazy" src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1000&q=70" alt="A young girl smiling in her village">
+    <div class="reveal">
+      <span class="label">Real people. Real impact.</span>
+      <h2>One Opportunity Can Change an Entire Life</h2>
+      <p>Sunita, 34, lives with her three children in a village where most girls leave school by thirteen. Her family's income depended on irregular farm labour.</p>
+      <ul class="facts">
+        <li><b>Challenge</b> No steady income and no money for school fees.</li>
+        <li><b>What we did</b> Tailoring training, a starter loan and a place in a women's savings group.</li>
+        <li><b>Result</b> Sunita now runs a small tailoring unit, employs two women, and all three children are in school.</li>
+      </ul>
+      <p><em>Details shared with consent; names changed for privacy. Replace with your own case study.</em></p>
+      <a href="#contact" class="more">Read Full Story →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OUR IMPACT ================= -->
+<section class="impact" id="impact">
+  <div class="wrap">
+    <span class="label">Our impact</span>
+    <h2>Results We Can Measure</h2>
+    <div class="stats reveal">
+      <div class="stat"><strong data-count="12500" data-suffix="+">0</strong><span>Children supported</span></div>
+      <div class="stat"><strong data-count="8400" data-suffix="+">0</strong><span>Families reached</span></div>
+      <div class="stat"><strong data-count="3200" data-suffix="+">0</strong><span>Women empowered</span></div>
+      <div class="stat"><strong data-count="75" data-suffix="+">0</strong><span>Community programs</span></div>
+    </div>
+    <p class="note">We track attendance, health check-ups, loans repaid and household income through field surveys every six months. Figures are reviewed by our board and published in our annual report. (Placeholder numbers — replace with verified data.)</p>
+  </div>
+</section>
+
+<!-- ================= PHOTO GALLERY ================= -->
+<section id="gallery" style="padding-top:0">
+  <div class="wrap">
+    <span class="label">Gallery</span>
+    <h2>Moments From the Field</h2>
+    <div class="gal" id="gal">
+      <button type="button"><img loading="lazy" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1000&q=70" alt="Children and volunteers at a learning centre"></button>
+      <button type="button"><img loading="lazy" src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=700&q=70" alt="Medical camp consultation"></button>
+      <button type="button"><img loading="lazy" src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=700&q=70" alt="Volunteers distributing supplies"></button>
+      <button type="button"><img loading="lazy" src="https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&w=700&q=70" alt="Women's skills workshop"></button>
+      <button type="button"><img loading="lazy" src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=700&q=70" alt="Classroom session"></button>
+      <button type="button"><img loading="lazy" src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=700&q=70" alt="Child from a partner village"></button>
+      <button type="button"><img loading="lazy" src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1000&q=70" alt="Annual volunteer event"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GET INVOLVED ================= -->
+<section class="involve" id="involved">
+  <div class="wrap">
+    <span class="label">Get involved</span>
+    <h2>Be Part of the Change</h2>
+    <p class="lead">There is a role for everyone, whether you have an hour, a skill or a gift to give.</p>
+    <div class="ways">
+      <div><i class="bi bi-people"></i><h3>Volunteer</h3><p>Teach, organise events or help at medical camps.</p></div>
+      <div><i class="bi bi-heart"></i><h3>Donate</h3><p>Give once or monthly to a program you care about.</p></div>
+      <div><i class="bi bi-handshake"></i><h3>Partner with us</h3><p>Businesses and institutions can co-create impact.</p></div>
+      <div><i class="bi bi-piggy-bank"></i><h3>Fundraise</h3><p>Start a campaign among friends, family or colleagues.</p></div>
+      <div><i class="bi bi-megaphone"></i><h3>Spread awareness</h3><p>Share our work and bring more people in.</p></div>
+    </div>
+    <div class="btns"><a href="#contact" class="btn">Become a Volunteer</a><a href="#donate" class="btn ghost" style="color:var(--green)">Support Our Work</a></div>
+  </div>
+</section>
+
+<!-- ================= DONATION CTA ================= -->
+<section class="donate" id="donate">
+  <img loading="lazy" src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1600&q=60" alt="">
+  <div class="wrap">
+    <h2>Your Support Can Change a Life</h2>
+    <p>Your gift pays for school fees, medicines, training and meals. Every rupee is tracked and reported to our donors each year. Reach out and we will share bank, UPI and tax-exemption details.</p>
+    <div class="btns"><a href="#contact" class="btn gold">Donate Now</a><a href="#contact" class="btn ghost">Talk to Us</a></div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section id="voices">
+  <div class="wrap">
+    <span class="label">Voices</span>
+    <h2>What People Say</h2>
+    <div class="quotes">
+      <figure class="reveal"><blockquote>“Working with the organisation has shown me how small contributions can create meaningful change.”</blockquote><figcaption><b>Meera Kapoor</b>, volunteer teacher</figcaption></figure>
+      <figure class="reveal"><blockquote>“My daughter now goes to school every day. We no longer have to choose between fees and food.”</blockquote><figcaption><b>Ramesh Yadav</b>, community member</figcaption></figure>
+      <figure class="reveal"><blockquote>“I give monthly because I receive clear reports. I can see where the money goes.”</blockquote><figcaption><b>Anil Sharma</b>, regular donor</figcaption></figure>
+      <figure class="reveal"><blockquote>“They listen to the community first. That is rare, and it is why our joint health camps work.”</blockquote><figcaption><b>Dr. Farah Khan</b>, health partner</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARTNERS ================= -->
+<div class="partners">
+  <div class="wrap">
+    <h2>Supported By</h2>
+    <div class="logos"><span><i class="bi bi-building"></i>Community Partner</span><span><i class="bi bi-diagram-3"></i>Social Impact Foundation</span><span><i class="bi bi-hospital"></i>Local Health Initiative</span><span><i class="bi bi-book"></i>Learning Trust</span></div>
+  </div>
+</div>
+
+<!-- ================= FAQ ================= -->
+<section id="faq">
+  <div class="wrap">
+    <span class="label" style="text-align:center">FAQ</span>
+    <h2 style="text-align:center">Frequently Asked Questions</h2>
+    <div class="faq" id="faq-list">
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How can I donate?<i class="bi bi-plus-lg"></i></button><div class="faq-a"><p>Use the Donate Now button or contact us. We accept bank transfer and UPI, and send a receipt for every gift.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How can I become a volunteer?<i class="bi bi-plus-lg"></i></button><div class="faq-a"><p>Send us a message with your skills and availability. We will arrange a short orientation.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Where does my donation go?<i class="bi bi-plus-lg"></i></button><div class="faq-a"><p>Most funds go directly to programs. A small share covers administration, and we publish an annual report.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Can organizations partner with us?<i class="bi bi-plus-lg"></i></button><div class="faq-a"><p>Yes. We work with companies, schools and institutions on sponsorships, employee volunteering and joint projects.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How can I support a specific program?<i class="bi bi-plus-lg"></i></button><div class="faq-a"><p>Tell us which program you want to support when you donate and we will allocate your gift accordingly.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How can I contact the NGO?<i class="bi bi-plus-lg"></i></button><div class="faq-a"><p>Call, email, use the form below or message us on WhatsApp. We reply within two working days.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT SECTION ================= -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <span class="label">Contact</span>
+        <h2>Let's Work Together</h2>
+        <p class="lead">Questions about volunteering, donating or partnering? Write to us and we will get back to you.</p>
+        <ul class="cinfo">
+          <li><i class="bi bi-telephone"></i><span>+91 8932010023</span></li>
+          <li><i class="bi bi-envelope"></i><span>info@example.org</span></li>
+          <li><i class="bi bi-geo-alt"></i><span>12 Community Road, Hazratganj, Lucknow, Uttar Pradesh 226001</span></li>
+          <li><i class="bi bi-clock"></i><span>Mon–Sat, 9:30 am – 5:30 pm</span></li>
+        </ul>
+        <div class="social"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></div>
+      </div>
+      <form id="cform" novalidate>
+        <div class="row2">
+          <div class="fld"><label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required><span class="err"></span></div>
+          <div class="fld"><label for="f-phone">Phone number</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required><span class="err"></span></div>
+        </div>
+        <div class="fld"><label for="f-email">Email address</label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="err"></span></div>
+        <div class="fld"><label for="f-subject">Subject</label><input id="f-subject" name="subject" required><span class="err"></span></div>
+        <div class="fld"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="4" required></textarea><span class="err"></span></div>
+        <button type="submit" class="btn">Send Message</button>
+        <p class="fnote"><i class="bi bi-whatsapp"></i> Sends your message via WhatsApp.</p>
+      </form>
+    </div>
+
+    <!-- ================= GOOGLE MAP ================= -->
+    <!-- Replace GOOGLE_MAP_EMBED_URL: Google Maps > Share > Embed a map > copy the src value -->
+    <div class="map-wrapper">
+      <iframe title="Office location map" src="https://www.google.com/maps?q=Hazratganj,Lucknow&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><a href="#home" class="logo"><b>A</b>Asha Foundation</a><p>A registered non-profit working with communities on education, healthcare and livelihoods since 2015.</p><div class="social"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></div></div>
+      <div><h3>Quick links</h3><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#programs">Programs</a></li><li><a href="#impact">Impact</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h3>Get involved</h3><ul><li><a href="#donate">Donate</a></li><li><a href="#involved">Volunteer</a></li><li><a href="#involved">Partner with us</a></li></ul></div>
+      <div><h3>Contact</h3><ul><li>+91 8932010023</li><li>info@example.org</li><li>12 Community Road, Hazratganj, Lucknow 226001</li></ul></div>
+    </div>
+    <div class="fbot"><span>© 2026 Asha Foundation. All rights reserved.</span><span>Designed &amp; developed with purpose.</span></div>
+  </div>
+</footer>
+
+<button id="top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<!-- Lightbox -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="x" aria-label="Close">&times;</button><button class="p" aria-label="Previous">&#8249;</button>
+  <img alt=""><button class="n" aria-label="Next">&#8250;</button>
+</div>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+/* ---------- CONFIG: replace with your details ---------- */
+const whatsappNumber = "918932010023";   // country code + number, digits only
+const ngoName = "Asha Foundation";
+
+/* Hide any image that fails to load, leaving the tinted placeholder */
+document.querySelectorAll('img').forEach(i => i.addEventListener('error', () => { i.style.visibility = 'hidden'; }));
+
+/* Mobile menu */
+const burger = document.getElementById('burger'), menu = document.getElementById('menu');
+burger.addEventListener('click', () => {
+  const open = menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+});
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.remove('open'); burger.setAttribute('aria-expanded', false); }));
+
+/* Sticky shadow + back-to-top */
+const nav = document.getElementById('nav'), topBtn = document.getElementById('top');
+addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', scrollY > 10);
+  topBtn.classList.toggle('show', scrollY > 600);
+}, { passive: true });
+topBtn.addEventListener('click', () => scrollTo({ top: 0, behavior: 'smooth' }));
+
+/* Active nav link */
+const links = [...menu.querySelectorAll('a[href^="#"]:not(.btn)')];
+const spy = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+}), { rootMargin: '-45% 0px -50% 0px' });
+links.forEach(l => { const s = document.querySelector(l.getAttribute('href')); if (s) spy.observe(s); });
+
+/* Scroll reveal + counters */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}), { threshold: .15 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+const co = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  const el = e.target, end = +el.dataset.count, suf = el.dataset.suffix || '', t0 = performance.now();
+  const step = t => { const p = Math.min((t - t0) / 1600, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))).toLocaleString('en-IN') + suf; if (p < 1) requestAnimationFrame(step); };
+  requestAnimationFrame(step); co.unobserve(el);
+}), { threshold: .6 });
+document.querySelectorAll('[data-count]').forEach(el => co.observe(el));
+
+/* FAQ accordion */
+document.querySelectorAll('.faq-q').forEach(b => b.addEventListener('click', () => {
+  const open = b.getAttribute('aria-expanded') === 'true', a = b.nextElementSibling;
+  b.setAttribute('aria-expanded', !open);
+  a.style.maxHeight = open ? 0 : a.scrollHeight + 'px';
+}));
+
+/* Gallery lightbox */
+const lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
+const shots = [...document.querySelectorAll('#gal img')]; let cur = 0;
+const show = i => { cur = (i + shots.length) % shots.length; lbImg.src = shots[cur].src.replace('w=700', 'w=1600').replace('w=1000', 'w=1600'); lbImg.alt = shots[cur].alt; };
+shots.forEach((im, i) => im.parentElement.addEventListener('click', () => { show(i); lb.classList.add('open'); lb.querySelector('.x').focus(); }));
+lb.querySelector('.x').onclick = () => lb.classList.remove('open');
+lb.querySelector('.p').onclick = () => show(cur - 1);
+lb.querySelector('.n').onclick = () => show(cur + 1);
+lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('open'); });
+addEventListener('keydown', e => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape') lb.classList.remove('open');
+  if (e.key === 'ArrowLeft') show(cur - 1);
+  if (e.key === 'ArrowRight') show(cur + 1);
+});
+
+/* Contact form -> validation -> WhatsApp */
+const form = document.getElementById('cform');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  let ok = true;
+  const rules = {
+    name: v => v.trim().length >= 2 || 'Enter your full name.',
+    phone: v => /^[+\d][\d\s-]{7,14}$/.test(v.trim()) || 'Enter a valid phone number.',
+    email: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) || 'Enter a valid email address.',
+    subject: v => v.trim().length >= 3 || 'Enter a subject.',
+    message: v => v.trim().length >= 10 || 'Write at least 10 characters.'
+  };
+  for (const [k, test] of Object.entries(rules)) {
+    const f = form.elements[k], r = test(f.value), err = f.parentElement.querySelector('.err');
+    f.classList.toggle('bad', r !== true); err.textContent = r === true ? '' : r;
+    if (r !== true) ok = false;
+  }
+  if (!ok) return form.querySelector('.bad').focus();
+  const d = Object.fromEntries(new FormData(form));
+  const text = `Hello, I would like to contact ${ngoName}.\n\nName: ${d.name}\nPhone: ${d.phone}\nEmail: ${d.email}\n\nSubject: ${d.subject}\n\nMessage:\n${d.message}\n\nThank you.`;
+  window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+});
+</script>
+</body>
+</html>
